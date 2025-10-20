@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Kopi Nusantara — Company Profile</title>
+	<meta name="description"
+		content="Kopi Nusantara company profile: specialty coffee roastery & café chain from Indonesia. Sustainable, modern, and customer‑obsessed." />
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+	tabindex="0">
+
+	<!-- NAVBAR -->
+	<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+				<span class="brand-badge"><i class="bi bi-cup-hot"></i></span>
+				<span class="fw-bold text-white">Kopi Nusantara</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+				aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navContent">
+				<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 ">
+					<li class="nav-item fw-bold"><a class="nav-link" href="#about">Tentang Kami</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#products">Produk</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#process">Proses</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#impact">Keberlanjutan</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#pricing">Harga</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#locations">Lokasi</a></li>
+					<li class="nav-item fw-bold"><a class="nav-link" href="#contact">Kontak</a></li>
+					<li class="nav-item fw-bold ms-lg-2">
+						<button id="themeToggle" class="btn btn-sm btn-outline-coffee rounded-pill">
+							<i class="bi bi-brightness-high"></i>
+							<span class="d-none d-lg-inline">Tema</span>
+						</button>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- HERO -->
+	<header id="home" class="hero">
+		<div class="container hero-inner py-5">
+			<div class="row align-items-center">
+				<div class="col-lg-7 text-white">
+					<span class="chip mb-3"><i class="bi bi-award me-1"></i> Indonesia Specialty
+						Coffee</span>
+					<h1 class="display-4 fw-bold">Brewed with <span class="gradient-text fw-bold">Character</span>,
+						Roasted with
+						Purpose
+					</h1>
+					<p class="lead mt-3" style="max-width:58ch">We are a vertically integrated
+						roastery & café brand, sourcing ethically from Indonesian farmers and
+						crafting flavor-first experiences—from bean to cup.</p>
+					<div class="d-flex gap-2 mt-4">
+						<a href="#products" class="btn btn-coffee rounded-pill">Explore
+							Coffees</a>
+					</div>
+					<div class="d-flex gap-4 mt-5 small text-white-50">
+						<div><i class="bi bi-emoji-smile me-1"></i> 50k+ happy customers</div>
+						<div><i class="bi bi-globe2 me-1"></i> 12 cities</div>
+						<div><i class="bi bi-leaf me-1"></i> zero‑waste roastery</div>
+					</div>
+				</div>
+				<div class="col-lg-5 mt-5 mt-lg-0">
+					<div class="card card-modern p-3">
+						<div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+							<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Coffee Demo Video"
+								allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+						<div class="d-flex align-items-center justify-content-between mt-3">
+							<div class="d-flex align-items-center gap-2">
+								<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=200&auto=format&fit=crop"
+									class="rounded-circle" width="42" height="42" alt="roaster" />
+								<div>
+									<div class="fw-semibold">Roastery Tour</div>
+									<div class="small text-muted">2:10 • Behind the
+										scenes</div>
+								</div>
+							</div>
+							<button class="btn btn-sm btn-outline-coffee rounded-pill" data-bs-toggle="modal"
+								data-bs-target="#bookModal"><i class="bi bi-calendar2-week"></i> Book
+								cupping</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- ABOUT -->
+	<section id="about">
+		<div class="container">
+			<div class="row align-items-center g-4">
+				<div class="col-lg-6 reveal">
+					<img class="img-fluid rounded-4 shadow"
+						src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
+						alt="Pour over" />
+				</div>
+				<div class="col-lg-6 reveal">
+					<span class="badge text-bg-light rounded-pill mb-2"><i class="bi bi-people"></i>
+						Since 2017</span>
+					<h2 class="section-title fw-bold">Craft, Community, and <span
+							class="gradient-text">Consistency</span></h2>
+					<p class="lead-muted">Kopi Nusantara is a specialty coffee company rooted in
+						relationships. We pay premiums for quality lots, invest in farmer
+						education, and roast with precision on Loring machines for clarity and
+						sweetness.</p>
+					<div class="row g-3 mt-2">
+						<div class="col-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="d-flex align-items-center gap-2 mb-2"><i
+										class="bi bi-speedometer2 fs-5 text-success"></i><span class="fw-semibold">QC
+										Protocols</span>
+								</div>
+								<p class="small text-secondary mb-0">Grading, density &
+									moisture checks, sample roasting, and cupping
+									per SCA standards.</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="d-flex align-items-center gap-2 mb-2"><i
+										class="bi bi-truck fs-5 text-warning"></i><span class="fw-semibold">B2B &
+										Wholesale</span></div>
+								<p class="small text-secondary mb-0">Roasted coffee,
+									consulting, training, and equipment for cafés
+									and offices.</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt-4 d-flex gap-3">
+						<div class="d-flex align-items-center gap-2"><i
+								class="bi bi-check-circle-fill text-success"></i> SCA
+							inspired</div>
+						<div class="d-flex align-items-center gap-2"><i
+								class="bi bi-check-circle-fill text-success"></i> Halal
+							certified</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PRODUCTS -->
+	<section id="products" class="bg-body-tertiary">
+		<div class="container">
+			<div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
+				<div>
+					<h2 class="section-title fw-bold mb-1">Signature Coffees</h2>
+					<p class="lead-muted mb-0">Single origins & blends. Freshly roasted every week.
+					</p>
+				</div>
+				<div class="btn-group" role="group" aria-label="Product filter">
+					<button class="btn btn-sm btn-outline-coffee active" data-filter="all">All</button>
+					<button class="btn btn-sm btn-outline-coffee" data-filter="single">Single
+						Origin</button>
+					<button class="btn btn-sm btn-outline-coffee" data-filter="blend">Blends</button>
+					<button class="btn btn-sm btn-outline-coffee" data-filter="capsule">Capsules</button>
+				</div>
+			</div>
+
+			<div class="row g-4" id="productGrid">
+				<!-- Product Card Template Items -->
+				<div class="col-md-6 col-lg-4 product reveal" data-type="single">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="Gayo" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">Aceh Gayo Natural</h5>
+								<span class="tag">Single Origin</span>
+							</div>
+							<p class="text-secondary small">Strawberry • Cocoa • Brown sugar
+							</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp149K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="Aceh Gayo Natural"
+									data-notes="Strawberry • Cocoa • Brown sugar" data-price="149000"
+									data-bs-toggle="modal" data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 product reveal" data-type="single">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="Toraja" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">Toraja Sapan</h5>
+								<span class="tag">Single Origin</span>
+							</div>
+							<p class="text-secondary small">Tropical fruit • Caramel • Clean
+								finish</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp159K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="Toraja Sapan"
+									data-notes="Tropical fruit • Caramel • Clean finish" data-price="159000"
+									data-bs-toggle="modal" data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 product reveal" data-type="blend">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="House Blend" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">House Blend 70/30</h5>
+								<span class="tag">Blend</span>
+							</div>
+							<p class="text-secondary small">Chocolate • Nuts • Balanced</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp129K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="House Blend 70/30"
+									data-notes="Chocolate • Nuts • Balanced" data-price="129000" data-bs-toggle="modal"
+									data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 product reveal" data-type="capsule">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1559056961-7a5557c4f0d1?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="Capsules" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">Espresso Capsules</h5>
+								<span class="tag">Capsules</span>
+							</div>
+							<p class="text-secondary small">Compatible with N*spresso®</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp89K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="Espresso Capsules"
+									data-notes="N*spresso compatible" data-price="89000" data-bs-toggle="modal"
+									data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 product reveal" data-type="blend">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="Cold Brew" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">Cold Brew Concentrate</h5>
+								<span class="tag">Blend</span>
+							</div>
+							<p class="text-secondary small">Smooth & low acidity</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp99K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="Cold Brew Concentrate"
+									data-notes="Smooth & low acidity" data-price="99000" data-bs-toggle="modal"
+									data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4 product reveal" data-type="single">
+					<div class="card card-modern h-100">
+						<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200&auto=format&fit=crop"
+							class="card-img-top" alt="Kintamani" />
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center mb-1">
+								<h5 class="card-title mb-0">Bali Kintamani</h5>
+								<span class="tag">Single Origin</span>
+							</div>
+							<p class="text-secondary small">Citrus • Jasmine • Honey</p>
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="price">Rp155K</div>
+								<button class="btn btn-coffee btn-sm rounded-pill" data-name="Bali Kintamani"
+									data-notes="Citrus • Jasmine • Honey" data-price="155000" data-bs-toggle="modal"
+									data-bs-target="#productModal">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- PROCESS -->
+	<section id="process">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="section-title fw-bold">From Farm to Cup</h2>
+				<p class="lead-muted">Transparent sourcing, meticulous roasting, and barista training.
+				</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100 text-center">
+						<div class="display-5 mb-2">🫘</div>
+						<h5>Direct Trade</h5>
+						<p class="text-secondary">We collaborate with smallholder farmers,
+							providing training and paying premiums for quality lots.</p>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100 text-center">
+						<div class="display-5 mb-2">🔥</div>
+						<h5>Precision Roast</h5>
+						<p class="text-secondary">Roasted on Loring for efficiency & flavor
+							clarity. Profiles validated through cuppings.</p>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100 text-center">
+						<div class="display-5 mb-2">☕</div>
+						<h5>Barista Craft</h5>
+						<p class="text-secondary">Our training program ensures consistency
+							across all outlets for every brew method.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-4 g-4">
+				<div class="col-md-6 reveal">
+					<div class="card card-modern p-4 h-100">
+						<h5 class="mb-3">Milestones</h5>
+						<div class="timeline">
+							<div class="t-item">
+								<div class="t-dot"></div>
+								<div class="ms-4"><strong>2017</strong> – Founded in
+									Bandung</div>
+							</div>
+							<div class="t-item">
+								<div class="t-dot"></div>
+								<div class="ms-4"><strong>2019</strong> – First roastery
+									& training lab</div>
+							</div>
+							<div class="t-item">
+								<div class="t-dot"></div>
+								<div class="ms-4"><strong>2022</strong> – 10th outlet
+									opened</div>
+							</div>
+							<div class="t-item">
+								<div class="t-dot"></div>
+								<div class="ms-4"><strong>2025</strong> – Export to SEA
+									partners</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 reveal">
+					<div class="card card-modern p-4 h-100">
+						<h5 class="mb-3">Stats</h5>
+						<div class="row text-center">
+							<div class="col-6 col-md-3 mb-3">
+								<div class="h2 fw-extrabold" data-counter="50000">0
+								</div>
+								<div class="small text-secondary">Customers</div>
+							</div>
+							<div class="col-6 col-md-3 mb-3">
+								<div class="h2 fw-extrabold" data-counter="12">0</div>
+								<div class="small text-secondary">Cities</div>
+							</div>
+							<div class="col-6 col-md-3 mb-3">
+								<div class="h2 fw-extrabold" data-counter="120">0</div>
+								<div class="small text-secondary">Partners</div>
+							</div>
+							<div class="col-6 col-md-3 mb-3">
+								<div class="h2 fw-extrabold" data-counter="98">0</div>
+								<div class="small text-secondary">SCA Scores ≥</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- IMPACT / SUSTAINABILITY -->
+	<section id="impact" class="bg-body-tertiary">
+		<div class="container">
+			<div class="row align-items-center g-4">
+				<div class="col-lg-6 reveal">
+					<h2 class="section-title fw-bold">Sustainability & Impact</h2>
+					<p class="lead-muted">We operate a zero‑waste roastery, compost our chaff, and
+						ship in recyclable packaging. Every bag supports farmer education and
+						climate resilience.</p>
+					<ul class="list-unstyled small text-secondary">
+						<li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>
+							1% of revenue to reforestation</li>
+						<li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>
+							Water‑saving cleaning protocol</li>
+						<li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>
+							Transparent pricing with producers</li>
+					</ul>
+				</div>
+				<div class="col-lg-6 reveal">
+					<div class="row g-3 gallery">
+						<div class="col-6"><img class="img-fluid"
+								src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop"
+								alt="Farm" /></div>
+						<div class="col-6"><img class="img-fluid"
+								src="https://images.unsplash.com/photo-1503480207415-fdddcc21d5a0?q=80&w=1200&auto=format&fit=crop"
+								alt="Roastery" /></div>
+						<div class="col-6"><img class="img-fluid"
+								src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200&auto=format&fit=crop"
+								alt="Brew" /></div>
+						<div class="col-6"><img class="img-fluid"
+								src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200&auto=format&fit=crop"
+								alt="Community" /></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- PRICING / WHOLESALE -->
+	<section id="pricing">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="section-title fw-bold">Pricing & Wholesale</h2>
+				<p class="lead-muted">Flexible for home brewers, offices, and cafés.</p>
+			</div>
+			<div class="row g-4 align-items-stretch">
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100">
+						<h5 class="mb-1">Home Pack</h5>
+						<div class="small text-secondary mb-3">250g • Freshly roasted</div>
+						<div class="price">Rp129K</div>
+						<ul class="list-unstyled mt-3 small text-secondary">
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Choice of
+								origins</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Grind to
+								method</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Brew guide
+							</li>
+						</ul>
+						<button class="btn btn-coffee rounded-pill mt-auto" data-wa
+							data-wa-text="Halo, saya tertarik Home Pack 250g. Mohon informasinya & cara pemesanan.">Order
+							via WhatsApp</button>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100 border border-2 border-warning-subtle">
+						<div class="d-flex align-items-center gap-2 mb-1"><span
+								class="badge text-bg-warning">Popular</span></div>
+						<h5 class="mb-1">Office Plan</h5>
+						<div class="small text-secondary mb-3">2kg / month • Subscription</div>
+						<div class="price">Rp899K</div>
+						<ul class="list-unstyled mt-3 small text-secondary">
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Monthly
+								delivery</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Equipment
+								support</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Barista
+								training</li>
+						</ul>
+						<button class="btn btn-coffee rounded-pill mt-auto" data-wa
+							data-wa-text="Halo, saya tertarik Office Plan (2kg/bulan). Tolong bantu setup langganan untuk kantor kami.">Start
+							via WhatsApp</button>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100">
+						<h5 class="mb-1">Café Wholesale</h5>
+						<div class="small text-secondary mb-3">5kg+ per order</div>
+						<div class="price">Custom</div>
+						<ul class="list-unstyled mt-3 small text-secondary">
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Exclusive
+								profiles</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> On‑site
+								calibration</li>
+							<li class="mb-2"><i class="bi bi-check2 me-2"></i> Marketing
+								support</li>
+						</ul>
+						<button class="btn btn-outline-coffee rounded-pill mt-auto" data-wa
+							data-wa-text="Halo, saya ingin diskusi Café Wholesale (5kg+). Bisa share price list & opsi profil roasting?">Talk
+							via WhatsApp</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LOCATIONS -->
+	<section id="locations" class="bg-body-tertiary">
+		<div class="container">
+			<div class="row g-4 align-items-center">
+				<div class="col-lg-6 reveal">
+					<h2 class="section-title fw-bold">Find Us</h2>
+					<p class="lead-muted">Visit our flagship cafés or book the roastery tour.</p>
+					<div class="row g-3">
+						<div class="col-md-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="d-flex align-items-start justify-content-between">
+									<div>
+										<div class="fw-semibold">Bandung</div>
+										<div class="small text-secondary">Jl.
+											Braga No. 88</div>
+									</div>
+									<span class="badge text-bg-light">Flagship</span>
+								</div>
+								<div class="mt-2 small"><i class="bi bi-clock me-1"></i>
+									08:00–22:00</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="fw-semibold">Jakarta</div>
+								<div class="small text-secondary">Jl. Senopati No. 21
+								</div>
+								<div class="mt-2 small"><i class="bi bi-clock me-1"></i>
+									07:00–23:00</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="fw-semibold">Surabaya</div>
+								<div class="small text-secondary">Jl. Darmo Permai 4
+								</div>
+								<div class="mt-2 small"><i class="bi bi-clock me-1"></i>
+									08:00–22:00</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card card-modern p-3 h-100">
+								<div class="fw-semibold">Bali</div>
+								<div class="small text-secondary">Jl. Petitenget 17
+								</div>
+								<div class="mt-2 small"><i class="bi bi-clock me-1"></i>
+									07:00–22:00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 reveal">
+					<div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow">
+						<iframe title="Map"
+							src="https://www.openstreetmap.org/export/embed.html?bbox=106.7830%2C-6.2500%2C106.8270%2C-6.2000&amp;layer=mapnik"
+							loading="lazy"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TESTIMONIALS -->
+	<section id="testimonials">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="section-title fw-bold">Loved by our community</h2>
+				<p class="lead-muted">What our customers are saying</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100">
+						<div class="d-flex align-items-center gap-3">
+							<img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle"
+								width="48" height="48" alt="Aisyah" />
+							<div>
+								<div class="fw-semibold">Aisyah</div>
+								<div class="small text-secondary">Home brewer</div>
+							</div>
+						</div>
+						<p class="mt-3 mb-0">“The Gayo natural is a strawberry bomb. Fast
+							shipping and clear brew guides. My daily go‑to.”</p>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100">
+						<div class="d-flex align-items-center gap-3">
+							<img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle" width="48"
+								height="48" alt="Budi" />
+							<div>
+								<div class="fw-semibold">Budi</div>
+								<div class="small text-secondary">Café owner</div>
+							</div>
+						</div>
+						<p class="mt-3 mb-0">“Consistent roast quality and on‑site calibration
+							helped us level up espresso across all shifts.”</p>
+					</div>
+				</div>
+				<div class="col-md-4 reveal">
+					<div class="card card-modern p-4 h-100">
+						<div class="d-flex align-items-center gap-3">
+							<img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle"
+								width="48" height="48" alt="Nadine" />
+							<div>
+								<div class="fw-semibold">Nadine</div>
+								<div class="small text-secondary">Office manager</div>
+							</div>
+						</div>
+						<p class="mt-3 mb-0">“Office plan keeps our team caffeinated and happy.
+							Great value, smooth logistics.”</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACT -->
+	<section id="contact" class="bg-body-tertiary">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-lg-6 reveal">
+					<h2 class="section-title fw-bold">Let’s talk coffee</h2>
+					<p class="lead-muted">Wholesale, events, or media? Send us a message and we’ll
+						get back within 1 business day.</p>
+					<div class="card card-modern p-4">
+						<form id="contactForm" novalidate>
+							<div class="row g-3">
+								<div class="col-md-6">
+									<label class="form-label">Name</label>
+									<input type="text" class="form-control" name="name" required />
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Email</label>
+									<input type="email" class="form-control" name="email" required />
+								</div>
+								<div class="col-12">
+									<label class="form-label">Subject</label>
+									<input type="text" class="form-control" name="subject" required />
+								</div>
+								<div class="col-12">
+									<label class="form-label">Message</label>
+									<textarea class="form-control" name="message" rows="4" required></textarea>
+								</div>
+								<div class="col-12 d-flex align-items-center justify-content-between">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="newsletterCheck">
+										<label class="form-check-label" for="newsletterCheck">Subscribe
+											to newsletter</label>
+									</div>
+									<button class="btn btn-coffee rounded-pill" type="submit">Send</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-6 reveal">
+					<div class="card card-modern p-4 h-100">
+						<h5 class="mb-3">Corporate Info</h5>
+						<div class="d-flex flex-column gap-2 small text-secondary">
+							<div><i class="bi bi-geo-alt me-2"></i> PT Kopi Nusantara
+								Sejahtera, Bandung, Indonesia</div>
+							<div><i class="bi bi-envelope me-2"></i> hello@kopinusantara.id
+							</div>
+							<div><i class="bi bi-telephone me-2"></i> +62 811 2233 4455
+							</div>
+							<div><i class="bi bi-instagram me-2"></i> @kopinusantara</div>
+						</div>
+						<hr>
+						<h5 class="mb-2">FAQ</h5>
+						<div class="accordion" id="faq">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="q1"><button class="accordion-button" type="button"
+										data-bs-toggle="collapse" data-bs-target="#a1">How fresh is your
+										coffee?</button></h2>
+								<div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+									<div class="accordion-body">We roast weekly and
+										ship within 48 hours for optimal
+										freshness.</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="q2"><button class="accordion-button collapsed"
+										type="button" data-bs-toggle="collapse" data-bs-target="#a2">Do you ship
+										worldwide?</button></h2>
+								<div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+									<div class="accordion-body">Yes, we ship across
+										Southeast Asia and selected
+										international locations.</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="q3"><button class="accordion-button collapsed"
+										type="button" data-bs-toggle="collapse" data-bs-target="#a3">Can you design a
+										custom roast for my café?</button></h2>
+								<div id="a3" class="accordion-collapse collapse" data-bs-parent="#faq">
+									<div class="accordion-body">Absolutely. We offer
+										custom profiles and ongoing QC support
+										for wholesale partners.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer py-4">
+		<div class="container d-flex flex-column flex-lg-row gap-3 align-items-center justify-content-between">
+			<div class="d-flex align-items-center gap-2">
+				<span class="brand-badge"><i class="bi bi-cup-hot"></i></span>
+				<div>
+					<div class="fw-semibold">Kopi Nusantara</div>
+					<div class="small text-secondary">© <span id="year"></span> All rights reserved.
+					</div>
+				</div>
+			</div>
+			<div class="social d-flex gap-2">
+				<a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+				<a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+				<a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+				<a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Back to top -->
+	<button id="backToTop" class="btn btn-coffee rounded-circle"><i class="bi bi-arrow-up"></i></button>
+
+	<!-- Floating WhatsApp -->
+	<a id="waFab" href="#" class="position-fixed" style="right:16px; bottom:76px; z-index:1030; text-decoration:none"
+		aria-label="WhatsApp">
+		<span class="d-inline-flex align-items-center justify-content-center"
+			style="width:56px;height:56px;border-radius:18px;background:#25D366;box-shadow:var(--shadow);color:#fff;font-size:26px"><i
+				class="bi bi-whatsapp"></i></span>
+	</a>
+
+	<!-- Product Modal -->
+	<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="productTitle">Product</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="mb-1 text-secondary" id="productNotes"></p>
+					<div class="d-flex align-items-center justify-content-between">
+						<div class="price" id="productPrice">Rp0</div>
+						<button id="productWaBtn" class="btn btn-coffee rounded-pill">Order via
+							WhatsApp</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Booking Modal -->
+	<div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Book a Cupping Session</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form id="bookForm" class="row g-3">
+						<div class="col-md-6">
+							<label class="form-label">Name</label>
+							<input class="form-control" required>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Email</label>
+							<input type="email" class="form-control" required>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Date</label>
+							<input type="date" class="form-control" required>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Guests</label>
+							<select class="form-select" required>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Notes</label>
+							<textarea class="form-control" rows="3" placeholder="Allergies, preferences..."></textarea>
+						</div>
+						<div class="col-12 text-end">
+							<button class="btn btn-coffee rounded-pill" type="submit">
+								<i class="bi bi-whatsapp me-1"></i> Kirim ke WhatsApp
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Toast -->
+	<div class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index:1080">
+		<div id="mainToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite"
+			aria-atomic="true">
+			<div class="d-flex">
+				<div class="toast-body"></div>
+				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+					aria-label="Close"></button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		// ===== Helpers =====
+		const $ = (sel, root = document) => root.querySelector(sel);
+		const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+		const toast = (msg) => {
+			const el = $('#mainToast');
+			$('.toast-body', el).textContent = msg;
+			new bootstrap.Toast(el, { delay: 2400 }).show();
+		};
+
+		// ===== WhatsApp helper =====
+		const WA_NUMBER = '6281234567890'; // TODO: ganti ke nomor WhatsApp kamu (tanpa +)
+		const openWA = (text) => {
+			const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+			window.open(url, '_blank');
+		};
+
+		// ===== Navbar shrink on scroll + backToTop =====
+		const nav = $('#mainNav');
+		const backTop = $('#backToTop');
+		const onScroll = () => {
+			const sc = window.scrollY;
+			nav.classList.toggle('scrolled', sc > 16);
+			backTop.style.display = sc > 500 ? 'inline-flex' : 'none';
+		};
+		document.addEventListener('scroll', onScroll, { passive: true });
+		backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+		// ===== Theme toggle (persisted) =====
+		const themeToggle = $('#themeToggle');
+		const setTheme = (t) => document.documentElement.setAttribute('data-theme', t);
+		setTheme(localStorage.getItem('theme') || 'light');
+		themeToggle.addEventListener('click', () => {
+			const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+			setTheme(next); localStorage.setItem('theme', next);
+			themeToggle.innerHTML = next === 'dark' ? '<i class="bi bi-moon"></i> <span class="d-none d-lg-inline">Theme</span>' : '<i class="bi bi-brightness-high"></i> <span class="d-none d-lg-inline">Theme</span>';
+		});
+
+		// ===== Reveal animations =====
+		const io = new IntersectionObserver((entries) => {
+			entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+		}, { threshold: .15 });
+		$$('.reveal').forEach(el => io.observe(el));
+
+		// ===== Counters =====
+		const animateCounter = (el) => {
+			const target = +el.dataset.counter; let cur = 0; const dur = 1100; const t0 = performance.now();
+			const tick = (t) => { const p = Math.min(1, (t - t0) / dur); cur = Math.floor(target * (0.2 + 0.8 * Math.pow(p, 1.8))); el.textContent = cur.toLocaleString('id-ID'); if (p < 1) requestAnimationFrame(tick); };
+			requestAnimationFrame(tick);
+		};
+		$$("[data-counter]").forEach(animateCounter);
+
+		// ===== Product filter =====
+		const grid = $('#productGrid');
+		$$('#products [data-filter]').forEach(btn => {
+			btn.addEventListener('click', () => {
+				$$('#products [data-filter]').forEach(b => b.classList.remove('active'));
+				btn.classList.add('active');
+				const type = btn.dataset.filter;
+				$$('.product', grid).forEach(card => {
+					const show = type === 'all' || card.dataset.type === type;
+					card.style.display = show ? '' : 'none';
+				});
+			});
+		});
+
+		// ===== Product modal population =====
+		$$('#productGrid .btn[data-bs-target="#productModal"]').forEach(btn => {
+			btn.addEventListener('click', () => {
+				$('#productTitle').textContent = btn.dataset.name;
+				$('#productNotes').textContent = btn.dataset.notes;
+				const priceNum = Number(btn.dataset.price || 0);
+				const price = priceNum.toLocaleString('id-ID');
+				$('#productPrice').textContent = `Rp${price}`;
+				const waBtn = $('#productWaBtn');
+				waBtn.onclick = () => openWA(`Halo, saya ingin pesan ${btn.dataset.name} (catatan: ${btn.dataset.notes}) dengan harga Rp${price}. Apakah stok tersedia?`);
+			});
+		});
+
+
+		// ===== Forms (demo only) =====
+		$('#contactForm').addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = e.target.name.value?.trim() || '-';
+			const email = e.target.email.value?.trim() || '-';
+			const subject = e.target.subject.value?.trim() || '-';
+			const message = e.target.message.value?.trim() || '-';
+			const text = `Halo Kopi Nusantara,%0A%0ASaya ${name} (${email}).%0ASubject: ${subject}%0APesan: ${message}%0A%0AKirim balasan via WhatsApp ya.`;
+			openWA(text);
+		})
+		$('#newsletterForm').addEventListener('submit', (e) => {
+			e.preventDefault();
+			const email = e.target.querySelector('input[type="email"]').value.trim();
+			openWA(`Halo, saya ingin berlangganan newsletter. Email saya: ${email}`);
+		})
+
+		// ===== Book Form → kirim ke WhatsApp =====
+		// ===== Book Form → kirim ke WhatsApp =====
+		$('#bookForm')?.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			const form = e.target;
+			const name = form.querySelector('input[type="text"]').value.trim() || '-';
+			const email = form.querySelector('input[type="email"]').value.trim() || '-';
+			const date = form.querySelector('input[type="date"]').value.trim() || '-';
+			const guests = form.querySelector('select').value || '-';
+			const notes = form.querySelector('textarea').value.trim() || '-';
+
+			const text = `Halo Kopi Nusantara,%0A%0ASaya ingin melakukan booking sesi cupping.%0A%0A📅 Tanggal: ${date}%0A👥 Tamu: ${guests}%0A🧍 Nama: ${name}%0A✉️ Email: ${email}%0A📝 Catatan: ${notes}%0A%0AMohon konfirmasi jadwalnya ya. Terima kasih ☕`;
+
+			openWA(text);
+
+			const modal = bootstrap.Modal.getInstance($('#bookModal'));
+			modal?.hide();
+		});
+
+		// ===== Year =====
+		$('#year').textContent = new Date().getFullYear();
+
+		// Init scroll state immediately
+		onScroll();
+
+		// Generic WA buttons
+		$$('[data-wa]').forEach(b => b.addEventListener('click', () => openWA(b.getAttribute('data-wa-text') || 'Halo, saya tertarik dengan produk Kopi Nusantara.')));
+
+		// WA FAB click
+		$('#waFab')?.addEventListener('click', (e) => { e.preventDefault(); openWA('Halo Kopi Nusantara! Saya ingin bertanya.'); });
+	</script>
+</body>
+
+</html>
