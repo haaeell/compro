@@ -35,7 +35,6 @@ h4 {
 	font-family: "Playfair Display", serif
 }
 
-/* ====== NAVBAR ====== */
 .navbar {
 	transition: all .25s ease;
 	background: transparent
@@ -69,7 +68,12 @@ h4 {
 	transition: color 0.3s ease;
 }
 
-.navbar.scrolled .navbar-brand span {
+.navbar .nav-title {
+	color: #fff;
+	transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-title {
 	color: #000;
 }
 
@@ -134,7 +138,6 @@ h4 {
 	color: #e5e7eb
 }
 
-/* Buttons */
 .btn-coffee {
 	--bs-btn-padding-y: .7rem;
 	--bs-btn-padding-x: 1.1rem;
@@ -157,7 +160,6 @@ h4 {
 	--bs-btn-hover-color: #fff
 }
 
-/* ====== SECTIONS & CARDS ====== */
 section {
 	padding: 80px 0
 }
@@ -198,7 +200,6 @@ section {
 	border-radius: 18px
 }
 
-/* ====== REVEAL ANIMATIONS ====== */
 .reveal {
 	opacity: 0;
 	transform: translateY(18px);
@@ -210,7 +211,6 @@ section {
 	transform: none
 }
 
-/* Product tags */
 .tag {
 	font-size: .7rem;
 	padding: .2rem .5rem;
@@ -224,7 +224,6 @@ section {
 	color: #cbd5e1
 }
 
-/* Gallery */
 .gallery img {
 	border-radius: 14px;
 	box-shadow: var(--shadow);
@@ -235,13 +234,11 @@ section {
 	transform: translateY(-6px)
 }
 
-/* Pricing */
 .price {
 	font-size: 2rem;
 	font-weight: 800
 }
 
-/* Timeline */
 .timeline {
 	position: relative;
 	padding-left: 1.5rem
@@ -273,7 +270,6 @@ section {
 	outline: 4px solid color-mix(in oklab, var(--leaf), transparent 70%)
 }
 
-/* Footer */
 .footer {
 	background: linear-gradient(180deg, rgba(111, 78, 55, .08), transparent 30%), var(--latte)
 }
@@ -289,7 +285,6 @@ section {
 	box-shadow: var(--shadow)
 }
 
-/* Back to top */
 #backToTop {
 	position: fixed;
 	right: 16px;
@@ -298,7 +293,6 @@ section {
 	display: none
 }
 
-/* Scrollbar (WebKit) */
 ::-webkit-scrollbar {
 	height: 10px;
 	width: 10px
@@ -316,7 +310,6 @@ section {
 	color: transparent;
 }
 
-/* ====== MOBILE MENU IMPROVEMENT WITH FADE & SLIDE ====== */
 @media (max-width: 991.98px) {
 	.navbar {
 		background: rgba(20, 20, 20, 0.85) !important;
@@ -324,7 +317,10 @@ section {
 		box-shadow: var(--shadow);
 	}
 
-	/* --- Toggler Button --- */
+	.hero {
+		padding-top: 50px;
+	}
+
 	.navbar-toggler {
 		border: none;
 		outline: none !important;
@@ -376,7 +372,6 @@ section {
 		top: 0;
 	}
 
-	/* --- Dropdown animation --- */
 	.navbar-collapse {
 		background: rgba(20, 20, 20, 0.96);
 		backdrop-filter: blur(12px);
@@ -432,24 +427,20 @@ section {
 		padding: 60px 0;
 	}
 
-	@media (max-width: 991.98px) {
-		.navbar.scrolled {
-			background: rgba(20, 20, 20, 0.9) !important;
-		}
-
-		.navbar.scrolled .nav-link,
-		.navbar.scrolled .navbar-brand span {
-			color: #fff !important;
-		}
-
-		.navbar.scrolled .nav-link:hover {
-			color: var(--gold) !important;
-		}
+	.navbar.scrolled {
+		background: rgba(20, 20, 20, 0.9) !important;
 	}
 
+	.navbar.scrolled .nav-link,
+	.navbar.scrolled .navbar-brand span {
+		color: #fff !important;
+	}
+
+	.navbar.scrolled .nav-link:hover {
+		color: var(--gold) !important;
+	}
 }
 
-/* Extra small screens */
 @media (max-width: 575.98px) {
 	.hero .display-4 {
 		font-size: 1.8rem;
@@ -470,7 +461,6 @@ section {
 	}
 }
 
-/* Fade-in animation for each menu item */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
