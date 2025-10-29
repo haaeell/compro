@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Detail Produk — Agro Surya Berdiri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="detail.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo3.PNG" alt="Logo" class="logo me-2">
+                <span>Agro Surya Berdiri</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">All Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PRODUCT DETAIL -->
+    <div class="container product-detail">
+        <div class="row">
+            <!-- Gambar / Swiper -->
+            <div class="col-md-6">
+                <div class="swiper mainSwiper">
+                    <div class="swiper-wrapper" id="mainImages"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper thumbsSwiper">
+                    <div class="swiper-wrapper" id="thumbImages"></div>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="col-md-6 product-info">
+                <h2 class="fw-bold text-success" id="productName">Nama Produk</h2>
+                <ul class="list-unstyled" id="productDetails"></ul>
+                <p class="text-secondary mt-3" id="productDesc"></p>
+                <a href="products.html" class="btn btn-orange mt-3">← Back to All Products</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // === Data Produk ===
+        const products = {
+            "fine-robusta": {
+                name: "Fine Robusta",
+                defect: "<2",
+                origin: "Temanggung, Central Java, Indonesia",
+                process: "Natural / Dry Process",
+                moisture: "12% - 13.5%",
+                altitude: "900 - 1200 masl",
+                tasty: "Bold, low acid, floral",
+                desc: "Fine Robusta beans represent the top quality from Temanggung. With less than 2% defect rate, this coffee delivers a clean cup with smooth floral notes — perfect for premium espresso blends and specialty blends.",
+                images: [
+                    "https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=1200"
+                ]
+            },
+
+            "robusta-grade1": {
+                name: "Robusta Grade 1",
+                defect: "3.3%",
+                origin: "Temanggung, Central Java, Indonesia",
+                process: "Natural / Dry Process",
+                moisture: "12% - 13.5%",
+                altitude: "900 - 1200 masl",
+                tasty: "Bold, low acid, floral",
+                desc: "Robusta Grade 1 offers high consistency and balanced flavor. With low defect rate and a deep aroma, it’s ideal for export blends with strong body and mild acidity — perfect for espresso and dark roast coffee.",
+                images: [
+                    "https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=1200"
+                ]
+            },
+
+            "robusta-grade2": {
+                name: "Robusta Grade 2",
+                defect: "8.3% - 10%",
+                origin: "Temanggung, Central Java, Indonesia",
+                process: "Natural / Dry Process",
+                moisture: "12% - 13.5%",
+                altitude: "900 - 1200 masl",
+                tasty: "Bold, low acid, floral",
+                desc: "Robusta Grade 2 provides an excellent balance between flavor and value. With a slightly higher defect rate, this grade maintains full-bodied richness and consistent cup quality, suitable for commercial and instant coffee production.",
+                images: [
+                    "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200"
+                ]
+            },
+
+            "robusta-grade3": {
+                name: "Robusta Grade 3",
+                defect: "14.6% - 20%",
+                origin: "Temanggung, Central Java, Indonesia",
+                process: "Natural / Dry Process",
+                moisture: "12% - 13.5%",
+                altitude: "900 - 1200 masl",
+                tasty: "Bold, low acid, floral",
+                desc: "Robusta Grade 3 is designed for industrial use, maintaining Temanggung’s characteristic strong body and earthy tones. Ideal for instant mixes, blends, and mass roasting with excellent aroma stability.",
+                images: [
+                    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200"
+                ]
+            },
+
+            "arabica-fullwashed": {
+                name: "Arabica Fullwashed",
+                defect: "<2",
+                origin: "Java, Indonesia",
+                process: "Full Washed",
+                moisture: "12% - 13.5%",
+                altitude: "1200 - 2500 masl",
+                tasty: "Fruity, floral",
+                desc: "Arabica Fullwashed offers a clean, crisp cup profile with bright acidity and elegant fruit notes. Grown at high altitudes in Java, this coffee reflects the refined taste and smooth clarity of Indonesian Arabica.",
+                images: [
+                    "https://images.unsplash.com/photo-1559943190-1e4d38c5e2a7?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200"
+                ]
+            },
+
+            "arabica-grade1": {
+                name: "Arabica Grade 1 Commercial",
+                defect: "3.3%",
+                origin: "Java, Indonesia",
+                process: "Dry",
+                moisture: "12% - 13.5%",
+                altitude: "1200 - 2500 masl",
+                tasty: "Earthy, smokey, fruity",
+                desc: "Arabica Grade 1 Commercial features a full-bodied taste with earthy undertones, smokey aroma, and subtle fruity sweetness. Perfect for commercial blends requiring a strong aroma and flavor consistency.",
+                images: [
+                    "https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200"
+                ]
+            },
+
+            "arabica-grade2": {
+                name: "Arabica Grade 2 Commercial",
+                defect: "8.3% - 10%",
+                origin: "Java, Indonesia",
+                process: "Dry",
+                moisture: "12% - 13.5%",
+                altitude: "1200 - 2500 masl",
+                tasty: "Earthy, smokey, fruity",
+                desc: "Arabica Grade 2 Commercial provides a bold yet smooth experience, balancing smokey aroma with mild fruitiness. A reliable choice for blended roasts, offering consistent quality and strong aroma retention.",
+                images: [
+                    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200"
+                ]
+            },
+
+            "arabica-grade3": {
+                name: "Arabica Grade 3 Commercial",
+                defect: "14.3% - 20%",
+                origin: "Java, Indonesia",
+                process: "Dry",
+                moisture: "12% - 13.5%",
+                altitude: "1200 - 2500 masl",
+                tasty: "Earthy, smokey, fruity",
+                desc: "Arabica Grade 3 Commercial offers an affordable yet flavorful option with bold earthy tones and smokey depth. Ideal for instant and large-scale coffee manufacturing while keeping an authentic Java character.",
+                images: [
+                    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?q=80&w=1200",
+                    "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200"
+                ]
+            }
+        };
+
+
+        // === Ambil ID dari URL ===
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const product = products[id];
+
+        if (product) {
+            document.getElementById("page-title").textContent = `${product.name} — Agro Surya Berdiri`;
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("productDesc").textContent = product.desc;
+
+            // Tampilkan detail
+            const details = `
+      <li><strong>Defect:</strong> ${product.defect}</li>
+      <li><strong>Origin:</strong> ${product.origin}</li>
+      <li><strong>Process:</strong> ${product.process}</li>
+      <li><strong>Moisture:</strong> ${product.moisture}</li>
+      <li><strong>Altitude:</strong> ${product.altitude}</li>
+      <li><strong>Tasty:</strong> ${product.tasty}</li>
+    `;
+            document.getElementById("productDetails").innerHTML = details;
+
+            // Tampilkan gambar Swiper
+            document.getElementById("mainImages").innerHTML = product.images
+                .map(img => `<div class="swiper-slide"><img src="${img}" alt=""></div>`).join("");
+            document.getElementById("thumbImages").innerHTML = product.images
+                .map(img => `<div class="swiper-slide"><img src="${img}" alt=""></div>`).join("");
+        }
+
+        // === Swiper Setup ===
+        const thumbsSwiper = new Swiper(".thumbsSwiper", {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        const mainSwiper = new Swiper(".mainSwiper", {
+            spaceBetween: 10,
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            thumbs: { swiper: thumbsSwiper },
+        });
+    </script>
+
+</body>
+
+</html>
