@@ -6,17 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="page-title">Detail Produk — Agro Surya Berdiri</title>
 
-    <!-- Bootstrap & Icons -->
+    <!-- 🌱 Default SEO (akan diubah dinamis via JS) -->
+    <meta name="description" id="meta-desc"
+        content="Temukan detail kopi premium dari Agro Surya Berdiri — kualitas ekspor dengan cita rasa khas Indonesia.">
+    <meta name="keywords" id="meta-keywords"
+        content="kopi Agro Surya Berdiri, kopi Indonesia, robusta, arabika, coffee export, Indonesian coffee, coffee beans">
+    <meta property="og:title" id="meta-og-title" content="Produk Kopi — Agro Surya Berdiri">
+    <meta property="og:description" id="meta-og-desc"
+        content="Lihat informasi lengkap tentang kopi unggulan Agro Surya Berdiri — dari asal, proses, hingga cita rasanya.">
+    <meta property="og:image" id="meta-og-image" content="/assets/images/logo3.png">
+    <meta property="og:type" content="product">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Agro Surya Berdiri">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="meta-twitter-title" content="Produk Kopi — Agro Surya Berdiri">
+    <meta name="twitter:description" id="meta-twitter-desc"
+        content="Kopi pilihan Agro Surya Berdiri, hasil terbaik dari petani Nusantara.">
+    <meta name="twitter:image" id="meta-twitter-image" content="/assets/images/logo3.png">
+    <link rel="canonical" id="meta-canonical" href="https://agrosuryaberdiri.com/pages/detail.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/logo3.png" type="image/png">
+
+    <!-- Bootstrap & Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- AOS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/detail.css" rel="stylesheet">
 </head>
@@ -132,7 +148,19 @@
         const id = new URLSearchParams(window.location.search).get("id");
         const p = products[id];
         if (p) {
+            document.title = `${p.name} — Agro Surya Berdiri`;
             document.getElementById("page-title").textContent = `${p.name} — Agro Surya Berdiri`;
+
+            document.getElementById("meta-desc").setAttribute("content", p.desc || "Kopi pilihan Agro Surya Berdiri dari petani Nusantara.");
+            document.getElementById("meta-keywords").setAttribute("content", `${p.name}, kopi Agro Surya Berdiri, kopi Indonesia, robusta, arabika, coffee export`);
+            document.getElementById("meta-og-title").setAttribute("content", `${p.name} — Agro Surya Berdiri`);
+            document.getElementById("meta-og-desc").setAttribute("content", p.desc || "Kopi pilihan Agro Surya Berdiri dari petani Nusantara.");
+            document.getElementById("meta-og-image").setAttribute("content", p.images[0] || "/assets/images/logo3.png");
+            document.getElementById("meta-twitter-title").setAttribute("content", `${p.name} — Agro Surya Berdiri`);
+            document.getElementById("meta-twitter-desc").setAttribute("content", p.desc || "Kopi pilihan Agro Surya Berdiri dari petani Nusantara.");
+            document.getElementById("meta-twitter-image").setAttribute("content", p.images[0] || "/assets/images/logo3.png");
+            document.getElementById("meta-canonical").setAttribute("href", `https://agrosuryaberdiri.com/pages/detail.html?id=${id}`);
+
             document.getElementById("productName").textContent = p.name;
             document.getElementById("productDesc").textContent = p.desc;
             document.getElementById("productDetails").innerHTML = `
@@ -143,14 +171,8 @@
       <li><strong>Altitude:</strong> ${p.altitude}</li>
       <li><strong>Tasty:</strong> ${p.tasty}</li>
     `;
-            document.getElementById("mainImages").innerHTML = p.images.map(img =>
-                `<div class="swiper-slide" data-aos="zoom-in"><img src="${img}" alt=""></div>`
-            ).join("");
-            document.getElementById("thumbImages").innerHTML = p.images.map(img =>
-                `<div class="swiper-slide" data-aos="fade-up"><img src="${img}" alt=""></div>`
-            ).join("");
-            setTimeout(() => AOS.refresh(), 300);
         }
+
 
         // === Swiper ===
         const thumbs = new Swiper(".thumbsSwiper", {

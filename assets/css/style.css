@@ -169,18 +169,6 @@ h4 {
 	color: #fff;
 }
 
-/* Responsif */
-@media (max-width: 767px) {
-	.hero {
-		text-align: center;
-		background-position: center;
-	}
-
-	.hero h1 {
-		font-size: 2rem;
-	}
-}
-
 /* ===== OUR STORY SECTION ===== */
 .our-story {
 	background: #F9F9F7;
@@ -544,13 +532,238 @@ footer {
 	color: var(--white);
 }
 
+.gallery-section {
+	background: #f9f9f7;
+	padding: 80px 0;
+}
+
+.gallery-card {
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 14px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background: var(--white);
+}
+
+.gallery-card img {
+	width: 100%;
+	height: 230px;
+	/* tinggi seragam */
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.gallery-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 8px 20px rgba(30, 86, 49, 0.15);
+}
+
+.gallery-card:hover img {
+	transform: scale(1.05);
+}
+
+/* ===== GALLERY GRADIENT (opsional untuk efek depth) ===== */
+.gallery-top::before,
+.gallery-bottom::before,
+.gallery-top::after,
+.gallery-bottom::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+.gallery-top::before,
+.gallery-bottom::before {
+	left: 0;
+	background: linear-gradient(to right, #f9f9f7 40%, transparent);
+}
+
+.gallery-top::after,
+.gallery-bottom::after {
+	right: 0;
+	background: linear-gradient(to left, #f9f9f7 40%, transparent);
+}
+
+/* ===== MODAL ===== */
+#galleryModal .modal-content {
+	background: #000;
+	border-radius: 10px;
+}
+
+#galleryModal img {
+	max-height: 75vh;
+	width: auto;
+	object-fit: contain;
+	margin: 0 auto;
+	display: block;
+}
+
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+=========================== */
+
+/* 🟢 Extra small devices (≤575px) */
+@media (max-width: 575px) {
+	.gallery-card {
+		height: 200px;
+	}
+
+	body {
+		font-size: 0.9rem;
+	}
+
+	.hero {
+		padding: 100px 20px;
+		text-align: center;
+		min-height: 80vh;
+	}
+
+	.hero h1 {
+		font-size: 1.8rem;
+		line-height: 1.3;
+	}
+
+	.hero p {
+		font-size: 1rem;
+	}
+
+	.navbar-brand {
+		font-size: 1.1rem;
+	}
+
+	.logo {
+		width: 40px;
+		height: 40px;
+	}
+
+	.product-card img,
+	.blog-card img {
+		height: 180px;
+	}
+
+	#blog-content img {
+		width: 100%;
+		max-height: 250px;
+	}
+}
+
+/* 🟠 Small devices (≤767px) */
 @media (max-width: 767px) {
+	.gallery-card {
+		height: 180px;
+	}
+
 	.hero {
 		text-align: center;
 		background-position: center;
+		padding: 80px 20px;
 	}
 
 	.hero h1 {
 		font-size: 2rem;
+	}
+
+	.hero .content {
+		max-width: 100%;
+	}
+
+	.our-story h2 {
+		font-size: 1.8rem;
+	}
+
+	.story-step img {
+		height: 180px;
+	}
+
+	.company-legality,
+	.product-certificate,
+	.all-products {
+		padding: 60px 0;
+	}
+
+	.product-card {
+		padding: 16px;
+	}
+
+	footer {
+		font-size: 0.85rem;
+	}
+}
+
+/* 🟡 Medium devices (≤991px) */
+@media (max-width: 991px) {
+	.gallery-card {
+		height: 200px;
+	}
+
+	.navbar .nav-link {
+		margin-left: 0.5rem;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+
+	.hero p {
+		font-size: 1.1rem;
+	}
+
+	.story-step {
+		margin-bottom: 1.5rem;
+	}
+
+	.product-card img {
+		height: 200px;
+	}
+
+	.blog-card img {
+		height: 180px;
+	}
+}
+
+/* 🔵 Large devices (≤1199px) */
+@media (max-width: 1199px) {
+	.hero h1 {
+		font-size: 2.8rem;
+	}
+
+	.hero p {
+		font-size: 1.15rem;
+	}
+
+	.story-step img,
+	.product-card img {
+		height: 220px;
+	}
+
+	.blog-card img {
+		height: 190px;
+	}
+}
+
+/* 🟣 XL screens (≥1200px) — optional fine-tune */
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1320px;
+	}
+
+	.hero h1 {
+		font-size: 3.5rem;
+	}
+
+	.hero p {
+		font-size: 1.3rem;
+	}
+
+	.product-card img {
+		height: 260px;
 	}
 }

@@ -16,19 +16,24 @@ window.addEventListener("scroll", function () {
         }
 });
 
-function loadComponent(id, file) {
+function loadComponent(id, file, callback) {
         fetch(`/components/${file}`)
                 .then(response => response.text())
                 .then(data => {
                         document.getElementById(id).innerHTML = data;
 
                         if (id === "navbar") setActiveNav();
-
                         if (id === "all-products") initProductTabs();
 
+                        if (callback && typeof callback === "function") {
+                                callback();
+                        }
+
                         AOS.refresh();
-                });
+                })
+                .catch(err => console.error(`Gagal memuat komponen ${file}:`, err));
 }
+
 
 function initProductTabs() {
         const typeTabs = document.querySelectorAll('#coffeeTabs .nav-link');
