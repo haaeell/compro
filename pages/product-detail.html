@@ -164,15 +164,21 @@
             document.getElementById("productName").textContent = p.name;
             document.getElementById("productDesc").textContent = p.desc;
             document.getElementById("productDetails").innerHTML = `
-      <li><strong>Defect:</strong> ${p.defect}</li>
-      <li><strong>Origin:</strong> ${p.origin}</li>
-      <li><strong>Process:</strong> ${p.process}</li>
-      <li><strong>Moisture:</strong> ${p.moisture}</li>
-      <li><strong>Altitude:</strong> ${p.altitude}</li>
-      <li><strong>Tasty:</strong> ${p.tasty}</li>
-    `;
+            <li><strong>Defect:</strong> ${p.defect}</li>
+            <li><strong>Origin:</strong> ${p.origin}</li>
+            <li><strong>Process:</strong> ${p.process}</li>
+            <li><strong>Moisture:</strong> ${p.moisture}</li>
+            <li><strong>Altitude:</strong> ${p.altitude}</li>
+            <li><strong>Tasty:</strong> ${p.tasty}</li>
+            `;
+            document.getElementById("mainImages").innerHTML = p.images.map(img =>
+                `<div class="swiper-slide" data-aos="zoom-in"><img src="${img}" alt=""></div>`
+            ).join("");
+            document.getElementById("thumbImages").innerHTML = p.images.map(img =>
+                `<div class="swiper-slide" data-aos="fade-up"><img src="${img}" alt=""></div>`
+            ).join("");
+            setTimeout(() => AOS.refresh(), 300);
         }
-
 
         // === Swiper ===
         const thumbs = new Swiper(".thumbsSwiper", {
